@@ -84,7 +84,7 @@ function render_group(n,data){
     for (let i=0;i<n;i++){
         index =`<h1 style="margin-top: 50px;">Nhóm ${i+1} </h1>`
         vt = i
-        block = `<div class="block${vt+1} ">`
+        block = `<div class="block${vt+1} style="z-index:-1;position: relative">`
         var htmls =
          data[i].map(function(student){
             return `<li class="std">
@@ -204,7 +204,7 @@ function renderstudents(data1){
     var liststudents = document.querySelector("#student");
     var htmls = 
     data1.map(function(student){
-        return `<li class="std">
+        return `<li class="std style="z-index:-1;position: relative"">
         <h2 class="content" style="margin-bottom:2px" >Số thứ tự :${student.id}</h2>
         <h3 class="content">Mã sinh viên  :${student.msv}</h3>
         <h3 class="content">Họ :${student.ho}</h3>
